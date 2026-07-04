@@ -32,4 +32,13 @@ export class DensitySubMenu {
     private renderDensitySubMenu(label: string, density: number) {
         return ImGui.SliderFloat(label, density, DENSITY.min, DENSITY.max);
     }
+
+    // Density is a momentary tool (e.g. thinning traffic for a race). The game resets
+    // the ped/car multipliers to default when the player loses control (mission/load),
+    // so rather than fight that, we let it default and snap the sliders back to 1.0 to
+    // stay honest about what is actually applied.
+    resetDisplayToDefault() {
+        this.pedDensity = 1.0;
+        this.carDensity = 1.0;
+    }
 }

@@ -26,4 +26,10 @@ export class WorldTab extends Tab {
             Weather.Force(this.weatherType);
         }
     }
+
+    onSuspended() {
+        // Player lost control (mission/load): the game resets ped/car density, so snap
+        // the sliders back to default to reflect reality instead of a stale value.
+        this.densitySubMenu.resetDisplayToDefault();
+    }
 }

@@ -20,6 +20,7 @@ const GUI_CONFIG = {
 
 export const renderGui = (tabs: Tabs) => {
     const tabNames = tabs.map(({ name }) => name).join(',');
+    const player = new Player(0);
 
     // FIXME asyncAwait freeze script after a while
     while (true) {
@@ -51,7 +52,17 @@ export const renderGui = (tabs: Tabs) => {
             ImGui.End();
         }
 
-        tabs.forEach(({ tab }) => tab.updateGameState());
+        // Only apply per-frame game/player writes while the player is actually in
+        // control. During mission cutscenes/transitions the ped handle is invalid and
+        // these writes (setNeverGetsTired, setHealth, FreezeTimer, ...) crash the game
+        // with an EXCEPTION_ACCESS_VIOLATION. isPlaying() is false during those windows.
+        if (player.isPlaying()) {
+            tabs.forEach(({ tab }) => tab.updateGameState());
+        } else {
+            // Not in control (loading/cutscene): let tabs resync state the game resets
+            // (e.g. the density sliders), without touching the player.
+            tabs.forEach(({ tab }) => { if (tab.onSuspended) tab.onSuspended(); });
+        }
 
         ImGui.EndFrame();
     }

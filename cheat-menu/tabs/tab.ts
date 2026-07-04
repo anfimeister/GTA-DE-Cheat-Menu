@@ -13,6 +13,12 @@ export abstract class Tab {
     * It is called once per game frame, allowing you to execute any necessary logic or updates game logic.
     * */
     abstract updateGameState();
+
+    /*
+    * Optional. Called each frame while the player is NOT in control (loading/cutscene),
+    * so a tab can resync any state the game resets during those windows.
+    * */
+    onSuspended?(): void;
 }
 
 export abstract class PlayerTab extends Tab {

@@ -12,6 +12,11 @@ import TRUCKS from './car/ids/trucks.json'
 import TUNERS from './car/ids/tuners.json'
 import VANS from './car/ids/vans.json'
 
+// San Fierro docks export/import mission car lists (Azar1K)
+import EXPORT_LIST_1 from './car/ids/export-list-1.json'
+import EXPORT_LIST_2 from './car/ids/export-list-2.json'
+import EXPORT_LIST_3 from './car/ids/export-list-3.json'
+
 import { CarCategory } from '../../../models/index';
 
 export const MOD_REMOVED = -1;
@@ -70,5 +75,17 @@ export const CAR_CATEGORIES: CarCategory[] = [
     {
         name: 'Miscellaneous',
         list: MISCELLANEOUS,
+    },
+    {
+        name: 'Export List 1',
+        list: EXPORT_LIST_1,
+    },
+    {
+        name: 'Export List 2',
+        list: EXPORT_LIST_2,
+    },
+    {
+        name: 'Export List 3',
+        list: EXPORT_LIST_3,
     },
 ]

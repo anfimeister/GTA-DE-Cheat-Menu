@@ -1,0 +1,5 @@
+{
+  "name": "cheat-menu",
+  "permissions": ["fs", "mem", "dll"],
+  "entries": ["index.ts"]
+}

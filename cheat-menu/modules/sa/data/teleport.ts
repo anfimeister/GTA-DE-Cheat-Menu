@@ -8,6 +8,15 @@ import SAFE_HOUSES_LOCATIONS from './teleports/safe-houses.json';
 import SCHOOLS_LOCATIONS from './teleports/schools.json';
 import TATTOOS_LOCATIONS from './teleports/tattoos.json';
 
+// Collectibles & extras (verified data from AlzKrak/Azar1K), grouped into sub-categories
+import STUNT_JUMPS from './teleports/stunt-jumps.json';
+import SPRAY_TAGS from './teleports/spray-tags.json';
+import SNAPSHOTS from './teleports/snapshots.json';
+import HORSESHOES from './teleports/horseshoes.json';
+import OYSTERS from './teleports/oysters.json';
+import GIRLFRIENDS_PLUS from './teleports/girlfriends-plus.json';
+import EXPORT_DOCK from './teleports/export-dock.json';
+
 import { Location } from '../../../models/index';
 
 export const TELEPORT_OPTIONS: Location[] = [
@@ -47,4 +56,11 @@ export const TELEPORT_OPTIONS: Location[] = [
         name: 'Tattoos',
         locations: TATTOOS_LOCATIONS,
     },
+    STUNT_JUMPS,
+    SPRAY_TAGS,
+    SNAPSHOTS,
+    HORSESHOES,
+    OYSTERS,
+    GIRLFRIENDS_PLUS,
+    EXPORT_DOCK,
 ];

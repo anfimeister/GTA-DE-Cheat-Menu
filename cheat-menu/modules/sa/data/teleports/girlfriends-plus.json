@@ -1,0 +1,33 @@
+{
+  "name": "Girlfriends+",
+  "groups": [
+    {
+      "name": "Homes",
+      "locations": [
+        { "name": "Denise Robinson", "x": 2403, "y": -1729, "z": 13 },
+        { "name": "Michelle Cannes", "x": -1797, "y": 1197, "z": 24 },
+        { "name": "Katie Zhan", "x": -2576, "y": 1145, "z": 55 },
+        { "name": "Helena Wankstein", "x": -377, "y": -1438, "z": 24.6 },
+        { "name": "Barbara Schternvart", "x": -1398, "y": 2633, "z": 55 },
+        { "name": "Millie Perkins", "x": 2035, "y": 2732, "z": 10.4 }
+      ]
+    },
+    {
+      "name": "Cafes",
+      "locations": [
+        { "name": "Denise Robinson", "x": 2398, "y": -1892, "z": 13 },
+        { "name": "Michelle Cannes", "x": -2249, "y": -85, "z": 35 },
+        { "name": "Katie Zhan", "x": -2518, "y": 1219, "z": 37 },
+        { "name": "Helena Wankstein", "x": 410, "y": -1430, "z": 33 },
+        { "name": "Barbara Schternvart", "x": -1934, "y": 2382, "z": 49 },
+        { "name": "Millie Perkins", "x": 2489, "y": 2060, "z": 10 }
+      ]
+    },
+    {
+      "name": "Dancing Club",
+      "locations": [
+        { "name": "Dancing Club (any girlfriend)", "x": -2555, "y": 184, "z": 5 }
+      ]
+    }
+  ]
+}
